@@ -104,8 +104,19 @@ div.campo > label {
     display: none;
 }
 
-div.campo > input {
-    background-color: var(--cor03);
+div#mail > input {
+    background-color: #b2e6ce;
+    font-size: 1em;
+    height: 92%;
+    width: calc(100% - 40px);
+    transform: translate(38.6px, -40px);
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+div#senha > input {
+    background-color: #b2e6ce;
     font-size: 1em;
     height: 92%;
     width: calc(100% - 40px);
