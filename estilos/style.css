@@ -48,23 +48,23 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
 
     overflow: hidden;
 
     background-color: white;
-    height: 510px;
+    height: 515px;
     width: 280px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.459);
 
+    transform: translate(-50%, -50%);
     transition: width .3s, height .3s;
     transition-timing-function: ease;
 }
 
 section#login > div#imagem {
     display: block;
-    background: var(--cor03) url(../images/modelo.jpg) no-repeat;
+    background: var(--cor03) url(../images/modelo.png) no-repeat;
     background-size: cover;
     background-position: 0px -70px;
     height: 200px;
@@ -82,10 +82,13 @@ div#formulario > h1 {
 
 div#formulario > p {
     font-size: 0.8em;
+    /*padding-bottom: 10px;*/
 }
 
+
+/* BG DOS FORMULARIOS */
 form > div.campo {
-    background-color: var(--cor00);
+    background-color: var(--cor01);
     display: block;
     width: 100%;
     height: 40px;
@@ -104,15 +107,17 @@ div.campo > label {
     display: none;
 }
 
+
+/* FORMULARIOS */
 div#mail > input {
     background-color: #b2e6ce;
     font-size: 1em;
     height: 92%;
     width: calc(100% - 40px);
-    transform: translate(38.6px, -40px);
     border: 0px;
     border-radius: 8px;
     padding: 4px;
+    transform: translate(38.6px, -40px);
 }
 
 div#senha > input {
@@ -120,12 +125,15 @@ div#senha > input {
     font-size: 1em;
     height: 92%;
     width: calc(100% - 40px);
-    transform: translate(38.6px, -41px);
     border: 0px;
     border-radius: 8px;
     padding: 4px;
+    transform: translate(38.6px, -41px);
 }
 
+
+
+/* BOTÕES DE ENTRAR E ESQUECI A SENHA */
 form > input[type=submit] {
     display: block;
     font-size: 1em;

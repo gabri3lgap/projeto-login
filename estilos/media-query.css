@@ -3,13 +3,14 @@
 @media screen and (min-width: 768px) and (max-width: 992px) {
     section#login {
         width: 80vw;
+        height: 305px;
     }
 
     section#login > div#imagem {
         float: left;
         width: 30%;
         height: 100%;
-        background-position: -20px;
+        background-position: 0px;
     }
 
     section#login > div#formulario {
@@ -25,13 +26,14 @@
 @media screen and (min-width: 992px) {
     section#login {
         width: 950px;
+        height: 350px;
     }
 
     section#login > div#imagem {
         float: right;
         width: 50%;
         height: 100%;
-        background-position: 0px;
+        background-position: 0px -90px;
     }
 
     section#login > div#formulario {
