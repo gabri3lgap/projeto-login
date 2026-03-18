@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+
+
+/* CONFIGURANDO AS CORES PRINCIPAIS */
 :root {
     --cor00: #011F26;
     --cor01: #012626;
@@ -9,15 +12,22 @@
     --cor06: #055252;
 }
 
+
+
+
+/* CONFIGURAÇÕES GERAIS DO PROJETO */
 * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0px;
     margin: 0px;
-    box-sizing: border-box;
-    color: var(--cor01);
+    box-sizing: border-box; /* considera as bordas no calculo dos tamanhos. NECESSARIO PARA O PROJETO!!!! */
+    color: var(--cor01); /* COR GERAL DOS TEXTOS DO PROJETO */
 }
 
 
+
+
+/* CONFIGURANDO BACKGROUND COM BLUR */
 body::before {
     content: "";
     position: fixed;
@@ -33,23 +43,36 @@ body::before {
 }
 
 
+
+
+/* CONFIGURANDO O CORPO DA PÁGINA */
 body, html {
     height: 100vh;
     width: 100vw;
 }
 
+
+
+
+/* CONFIGURANDO O MAIN */
+/* TÁ TUDO DENTRO DO MAIN */
 main {
     position: relative;
     height: 100vh;
     width: 100vw;
 }
 
+
+
+
+/* CONFIGURANDO A SECTION */
+/* TÁ TUDO DENTRO DA SECTION, A SECTION TÁ DENTRO DE LOGIN */
 section#login {
     position: absolute;
     top: 50%;
     left: 50%;
 
-    overflow: hidden;
+    overflow: hidden; /* faz a imagem ficar dentro do quadro */
 
     background-color: white;
     height: 515px;
@@ -62,6 +85,10 @@ section#login {
     transition-timing-function: ease;
 }
 
+
+
+
+/* CONFIGURANDO A FOTO */
 section#login > div#imagem {
     display: block;
     background: var(--cor03) url(../images/modelo.png) no-repeat;
@@ -70,20 +97,33 @@ section#login > div#imagem {
     height: 200px;
 }
 
+
+
+
+/* CONFIGURANDO O CORPO DO FORMULÁRIO/PARTE BRANCA */
 section#login > div#formulario {
     display: block;
     padding: 10px;
 }
 
+
+
+
+/* TÍTULO "LOGIN" */
 div#formulario > h1 {
     text-align: center;
     margin-bottom: 10px;
 }
 
+
+
+/* TEXTO DE BEM VINDO */
 div#formulario > p {
     font-size: 0.8em;
     /*padding-bottom: 10px;*/
 }
+
+
 
 
 /* BG DOS FORMULARIOS */
@@ -96,6 +136,10 @@ form > div.campo {
     margin: 5px 0px;
 }
 
+
+
+
+/* ÍCONES DE LOGIN E SENHA */
 div.campo > span {
     color: white;
     font-size: 2em;
@@ -103,13 +147,29 @@ div.campo > span {
     padding: 5px;
 }
 
+
+
+/* APAGANDO OS TEXTOS DO LABEL */
 div.campo > label {
     display: none;
 }
 
 
+
+
 /* FORMULARIOS */
+/* CONFIGUREI INDIVIDUALMENTE PARA TER MAIS PRECISÃO NOS PIXELS */
 div#mail > input {
+    background-color: #b2e6ce;
+    font-size: 1em;
+    height: 92%;
+    width: calc(100% - 40px);
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translate(38.6px, -41px);
+}
+div#senha > input {
     background-color: #b2e6ce;
     font-size: 1em;
     height: 92%;
@@ -120,20 +180,11 @@ div#mail > input {
     transform: translate(38.6px, -40px);
 }
 
-div#senha > input {
-    background-color: #b2e6ce;
-    font-size: 1em;
-    height: 92%;
-    width: calc(100% - 40px);
-    border: 0px;
-    border-radius: 8px;
-    padding: 4px;
-    transform: translate(38.6px, -41px);
-}
 
 
 
-/* BOTÕES DE ENTRAR E ESQUECI A SENHA */
+
+/* BOTÃO DE ENTRAR */
 form > input[type=submit] {
     display: block;
     font-size: 1em;
@@ -145,11 +196,11 @@ form > input[type=submit] {
     border-radius: 5px;
     cursor: pointer;
 }
-
 form > input[type=submit]:hover {
     background-color: var(--cor06);
 }
 
+/* BOTÃO DE ESQUECI A SENHA */
 form > a.botao {
     display: flex;
     align-items: center;
@@ -164,11 +215,10 @@ form > a.botao {
     color: white;
     border-radius: 5px;
 }
-
+/* ÍCONE DO BOTÃO */
 form > a.botao > span {
     color: white;
 }
-
 form > a.botao:hover {
     background-color: var(--cor03);
 }

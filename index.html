@@ -4,31 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Login</title>
+
+    <!--Importo os ícones do GOOGLE ICONS-->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <!--Linko as CSS para a principal (mobile first) e para as media-query-->
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media-query.css">
+
+
 </head>
 <body>
+    <!--O corpo da tela de login é todo dentro de um MAIN-->
     <main>
+        <!--E tudo fica dentro de uma SECTION-->
         <section id="login">
-            <div id="imagem">
 
-            </div>
+            <!--Crio uma DIV apenas para configurar a imagem na CSS-->
+            <div id="imagem"></div>
+
+            <!--E outra DIV para configurar o formulário-->
             <div id="formulario">
+
+                <!--O texto padrão da tela de login-->
                 <h1>Login</h1>
                 <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
+
+                <!--Toda a parte do formulário-->
                 <form action="login.php" method="post" autocomplete="on">
+
+
+                    <!--Form do email-->
                     <div class="campo" id="mail">
+                        <!--Ícone de login-->
                         <span class="material-symbols-outlined">person</span>
+                        <!--Input e Label-->
                         <input type="email" name="login" id="ilogin" placeholder="seu e-mail" autocomplete="email" required maxlength="30">
                         <label for="ilogin">Login</label>
                     </div>
+
+
+                    <!--Form de senha-->
                     <div class="campo" id="senha">
+
+                        <!--Ícone da senha-->
                         <span class="material-symbols-outlined">vpn_key</span>
+
+                        <!--Input de label-->
                         <input type="password" name="senha" id="isenha" placeholder="sua senha" autocomplete="current-password" required minlength="8" maxlength="20">
                         <label for="isenha">Senha</label>
                     </div>
+
+
+                    <!--Botão de ENTRAR-->
                     <input type="submit" value="Entrar">
+
+                    <!--Link que simula um botão de Esqueci a Senha + ícone-->
                     <a href="esqueci.html" class="botao">
                         Esqueci a senha <span class="material-symbols-outlined">mail</span>
                     </a>
